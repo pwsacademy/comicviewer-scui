@@ -1,4 +1,7 @@
 import Foundation
+#if os(Linux)
+import FoundationNetworking
+#endif
 import ImageFormats
 
 /// A repository that fetches comics from the [XKCD API](https://xkcd.com/json.html).
