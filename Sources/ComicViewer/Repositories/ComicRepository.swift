@@ -1,3 +1,5 @@
+import ImageFormats
+
 /// A repository that can fetch comics from a specified source.
 ///
 /// This is a helper type for ``ComicStore``.
@@ -12,7 +14,7 @@ protocol ComicRepository {
     func fetchComic(_ number: Int) async throws -> Comic
     
     /// Fetch the image for the given comic.
-    func fetchImage(for comic: Comic) async throws -> ComicImage
+    func fetchImage(for comic: Comic) async throws -> Image<RGBA>
 }
 
 enum ComicRepositoryError: Error {

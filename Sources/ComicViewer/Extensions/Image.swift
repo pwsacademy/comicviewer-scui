@@ -1,22 +1,7 @@
-import Foundation
+import ImageFormats
 
-// TODO: Do we still need this type when we have ImageFormats.Image?
+extension Image {
 
-/// Image data for a ``Comic``.
-///
-/// This type is nonisolated to allow its unit tests to run in parallel.
-/// Otherwise, the default main actor isolation would apply to this type, even though it doesn't require any isolation.
-nonisolated struct ComicImage {
-    
-    /// The bytes for this image.
-    let data: Data
-    
-    /// The original width of the image.
-    let width: Double
-    
-    /// The original height of the image.
-    let height: Double
-    
     /// Returns an appropriate scale factor to fit this image in the given space.
     ///
     /// - Parameters:
@@ -35,6 +20,8 @@ nonisolated struct ComicImage {
         upScaleLimit: Double = 4
     ) -> Double {
         var scale = 1.0
+        let width = Double(width)
+        let height = Double(height)
         // First, scale the image up to its minimum size.
         if width < minSize || height < minSize {
             scale = max(minSize / width, minSize / height)
@@ -62,16 +49,5 @@ nonisolated struct ComicImage {
             }
         }
         return scale
-    }
-}
-
-extension ComicImage {
-    
-    /// Returns a `ComicImage` loaded from a local file.
-    ///
-    /// This can be useful for testing.
-    static func example() -> ComicImage {
-        let data = try! Data(contentsOf: Bundle.module.url(forResource: "compiling", withExtension: "png")!)
-        return ComicImage(data: data, width: 413, height: 360)
     }
 }

@@ -19,15 +19,11 @@ class OnlineComicRepository: ComicRepository {
         return try JSONDecoder().decode(Comic.self, from: data)
     }
     
-    func fetchImage(for comic: Comic) async throws -> ComicImage {
+    func fetchImage(for comic: Comic) async throws -> Image<RGBA> {
         let (data, _) = try await URLSession.shared.data(from: comic.image)
         guard let image = try? Image<RGBA>.load(from: [UInt8](data)) else {
             throw ComicRepositoryError.invalidImage
         }
-        return ComicImage(
-            data: data,
-            width: Double(image.width),
-            height: Double(image.height)
-        )
+        return image
     }
 }

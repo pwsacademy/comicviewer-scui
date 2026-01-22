@@ -25,15 +25,10 @@ class ExampleComicRepository: ComicRepository {
         comics[number - 1]
     }
     
-    func fetchImage(for comic: Comic) -> ComicImage {
+    func fetchImage(for comic: Comic) -> Image<RGBA> {
         let fileName = comic.image.lastPathComponent
         let url = Bundle.module.url(forResource: fileName, withExtension: nil)!
         let data = try! Data(contentsOf: url)
-        let image = try! Image<RGBA>.load(from: [UInt8](data))
-        return ComicImage(
-            data: data,
-            width: Double(image.width),
-            height: Double(image.height)
-        )
+        return try! Image<RGBA>.load(from: [UInt8](data))
     }
 }

@@ -55,11 +55,13 @@ struct ComicCommands {
                 """)
             return
         }
-        guard let url = await openSaveDialog() else {
+        guard var url = await openSaveDialog() else {
             return
         }
         do {
-            try image.data.write(to: url, options: .atomic)
+            url = url.deletingPathExtension().appendingPathExtension(for: .png)
+            let data = Data(try image.encode(to: .png))
+            try data.write(to: url, options: .atomic)
         } catch {
             logger.error("Failed to save this file.", metadata: [
                 "url": "\(url)",

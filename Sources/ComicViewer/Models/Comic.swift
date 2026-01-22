@@ -16,9 +16,7 @@ struct Comic: Equatable {
     /// The comic's publication date.
     let date: Date
     
-    /// A URL pointing to the comic's image file.
-    ///
-    /// We use this to construct a ``ComicImage``.
+    /// A URL pointing to the comic's image file..
     let image: URL
     
     /// The comic's description (alt text).

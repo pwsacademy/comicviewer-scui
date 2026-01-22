@@ -4,10 +4,10 @@ import SwiftCrossUI
 struct ComicView: View {
         
     private let comic: Comic
-    private let image: ComicImage
+    private let image: ImageFormats.Image<RGBA>
     private let zoom: Double
     
-    init(_ comic: Comic, _ image: ComicImage, zoom: Double = 1.0) {
+    init(_ comic: Comic, _ image: ImageFormats.Image<RGBA>, zoom: Double = 1.0) {
         self.comic = comic
         self.image = image
         self.zoom = zoom
@@ -27,9 +27,12 @@ struct ComicView: View {
                     availableHeight: proxy.size.height
                 ) * zoom
                 ZStack(alignment: .center) {
-                    Image(try! Image.load(from: [UInt8](image.data)))
+                    Image(image)
                         .resizable()
-                        .frame(width: Int(image.width * scale), height: Int(image.height * scale))
+                        .frame(
+                            width: Int(Double(image.width) * scale),
+                            height: Int(Double(image.height) * scale)
+                        )
                 }
                 .frame(
                     width: toInt(proxy.size.width),

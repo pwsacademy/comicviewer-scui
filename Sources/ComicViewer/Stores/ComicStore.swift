@@ -1,3 +1,4 @@
+import ImageFormats
 import Logging
 import SwiftCrossUI
 
@@ -66,7 +67,7 @@ class ComicStore: ObservableObject {
     /// The image for the currently selected comic.
     ///
     /// This property is set to `nil` while loading a new comic.
-    @Published var imageForSelectedComic: ComicImage?
+    @Published var imageForSelectedComic: ImageFormats.Image<RGBA>?
     
     /// Returns `true` if at least one comic was released *before* the selected one.
     ///
@@ -165,7 +166,7 @@ class ComicStore: ObservableObject {
     
     /// The current zoom level.
     ///
-    /// Images are first scaled using ``ComicImage/scaleToFit(availableWidth:availableHeight:minSize:downScaleLimit:upScaleLimit:)``.
+    /// Images are first scaled using ``/ImageFormats/Image/scaleToFit(availableWidth:availableHeight:minSize:downScaleLimit:upScaleLimit:)``.
     /// This property allows the user to manually adjust the scale of the image.
     @Published var zoomLevel = 1.0
     
