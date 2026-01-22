@@ -1,0 +1,41 @@
+[
+    {
+        "num": 1,
+        "month": "8",
+        "link": "",
+        "year": "2007",
+        "news": "",
+        "safe_title": "Compiling",
+        "transcript": "{{ Title: The #1 Programmer Excuse for Legitimately Slacking Off: \u00e2\u0080\u009cMy code's compiling.\u00e2\u0080\u009d }}\n[[Two programmers are sword-fighting on office chairs in a hallway. An unseen manager calls them back to work through an open office door.]]\nManager: Hey! Get back to work!\nProgrammer 1: Compiling!\nManager: Oh. Carry on.\n{{ Alt: \u00e2\u0080\u0098Are you stealing those LCDs?\u00e2\u0080\u0099 \u00e2\u0080\u0098Yeah, but I'm doing it while my code compiles.\u00e2\u0080\u0099 }}",
+        "alt": "'Are you stealing those LCDs?' 'Yeah, but I'm doing it while my code compiles.'",
+        "img": "https://imgs.xkcd.com/comics/compiling.png",
+        "title": "Compiling",
+        "day": "15"
+    },
+    {
+        "num": 2,
+        "month": "2",
+        "link": "",
+        "year": "2008",
+        "news": "",
+        "safe_title": "Real Programmers",
+        "transcript": "[[A man sits at a computer, programming. Another man behind him looks over his shoulder.]]\nMan: nano? REAL programmers use Emacs.\n[[A dark haired woman appears behind him.]]\nWoman: Hey. REAL programmers use Vim.\n[[Another man appears behind her.]]\nMan: Well, REAL programmers use ed.\n[[Another man appears behind him.]]\nMan: No, REAL programmers use cat.\n[[A woman with a bun appears behind him.]]\nWoman: REAL programmers use a magnetized needle and a steady hand.\n[[A man enters, facing them all.]]\nMan: Excuse me, but REAL programmers use butterflies. \n[[Holding out a butterfly in front of the computer.]]\nMan: They open their hands and let the delicate wings flap once.\n[[Diagrams of flowing currents.]]\nMan: The disturbances ripple outward, changing the flow of the Eddy currents in the upper atmosphere. \nThese cause momentary pockets of higher-pressure air to form, ...\nMan: Which act as lenses that deflect incoming cosmic rays, focusing them to strike the drive platter and flip the desired bit.\nEmacs User: Nice. 'Course, there's an Emacs command to do that.\ncat User: Oh yeah! Good ol' C-x M-c M-butterfly...\n[[Butterfly man slaps forehead.]]\nButterfly man: Dammit, Emacs.\n{{Title text: Real programmers set the universal constants at the start such that the universe evolves to contain the disk with the data they want.}}",
+        "alt": "Real programmers set the universal constants at the start such that the universe evolves to contain the disk with the data they want.",
+        "img": "https://imgs.xkcd.com/comics/real_programmers.png",
+        "title": "Real Programmers",
+        "day": "1"
+    },
+    {
+        "num": 3,
+        "month": "11",
+        "link": "",
+        "year": "2012",
+        "news": "",
+        "safe_title": "\u202eLTR",
+        "transcript": "[[A chap is standing next to the black hat guy, who's sitting on a chair working on a laptop.]]\nChap: And that's not even the worst part! The \nworst\n part is that--\nBlack Hat: <<U+202e>>\nChap: ...neve t'ndid yeht--\nChap: ?lleh eht tahw... ...uoy did woh\nChap: .elohssa...\n{{The chap's text, read right to left, reads:  --they didn't even... how did you... ... what the hell? ...asshole.}}\n\n{{Title text: Collaborative editing can quickly become a textual rap battle fought with increasingly convoluted invocations of U+202a to U+202e.}}",
+        "alt": "Collaborative editing can quickly become a textual rap battle fought with increasingly convoluted invocations of U+202a to U+202e.",
+        "img": "https://imgs.xkcd.com/comics/rtl.png",
+        "title": "\u202eLTR",
+        "day": "21"
+    }
+]
