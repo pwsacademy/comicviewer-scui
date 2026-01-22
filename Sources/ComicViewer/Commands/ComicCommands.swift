@@ -59,7 +59,7 @@ struct ComicCommands {
             return
         }
         do {
-            url = url.deletingPathExtension().appendingPathExtension(for: .png)
+            url = url.deletingPathExtension().appendingPathExtension("png")
             let data = Data(try image.encode(to: .png))
             try data.write(to: url, options: .atomic)
         } catch {
