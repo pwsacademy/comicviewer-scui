@@ -40,7 +40,13 @@ enum AppSettings {
     ///
     /// This currently only applies to favorites.
     /// `UserDefaults` (`@AppStorage`) has its own backing store.
+    #if os(Linux)
+    static let directory = URL.homeDirectory.appending(
+        path: ".config/comic-viewer"
+    )
+    #else
     static let directory = URL.homeDirectory.appending(
         path: "Library/Application Support/Comic Viewer"
     )
+    #endif
 }
