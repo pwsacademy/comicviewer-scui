@@ -8,8 +8,6 @@ import SwiftCrossUI
 /// Child views can safely assume the comic store has been initialized.
 struct RootLoadingView: View {
     
-    @State private var comicStore: ComicStore?
-    @State private var favoritesStore = FavoritesStore()
     @State private var loadingFailed = false
     
     private var focusedValues: FocusedValues
@@ -20,7 +18,8 @@ struct RootLoadingView: View {
 
     var body: some View {
         Group {
-            if let comicStore {
+            if let comicStore = focusedValues.comicStore,
+               let favoritesStore = focusedValues.favoritesStore {
                 RootView(comicStore, favoritesStore)
             } else if loadingFailed {
                 ContentUnavailableView(
@@ -40,12 +39,12 @@ struct RootLoadingView: View {
             do {
                 // Simulate a slow connection to test the loading screen.
                 // try? await Task.sleep(for: .seconds(2))
-                comicStore = try await ComicStore(
+                let comicStore = try await ComicStore(
                     initialSelection: .random,
                     repository: OnlineComicRepository()
                 )
                 focusedValues.comicStore = comicStore
-                focusedValues.favoritesStore = favoritesStore
+                focusedValues.favoritesStore = FavoritesStore()
             } catch {
                 logger.critical("Failed to create a comic store.", metadata: [
                     "error": "\(error)"

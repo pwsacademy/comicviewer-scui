@@ -1,8 +1,8 @@
-/// Wrapper for objects that would normally be available as a `FocusedValue`.
-/// 
-/// This limited workaround doesn't support observability.
-class FocusedValues {
+import SwiftCrossUI
 
-    var comicStore: ComicStore?
-    var favoritesStore: FavoritesStore?
+/// Wrapper for objects that would normally be available as a `FocusedValue`.
+class FocusedValues: ObservableObject {
+
+    @Published var comicStore: ComicStore?
+    @Published var favoritesStore: FavoritesStore?
 }
