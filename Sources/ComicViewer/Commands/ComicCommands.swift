@@ -14,15 +14,16 @@ struct ComicCommands {
 
     var body: CommandMenu {
         CommandMenu("Comic") {
-            Button("Toggle Favorite") {
-                guard let favoritesStore = focusedValues.favoritesStore,
-                      let comic = focusedValues.comicStore?.selectedComic else {
-                    return
-                }
+            if let favoritesStore = focusedValues.favoritesStore,
+               let comic = focusedValues.comicStore?.selectedComic {
                 if favoritesStore.contains(comic) {
-                    favoritesStore.remove(comic)
+                    Button("Remove from Favorites") {
+                        favoritesStore.remove(comic)
+                    }
                 } else {
-                    favoritesStore.add(comic)
+                    Button("Add to Favorites") {
+                        favoritesStore.add(comic)
+                    }
                 }
             }
 
