@@ -44,6 +44,10 @@ enum AppSettings {
     static let directory = URL.homeDirectory.appending(
         path: ".config/comic-viewer"
     )
+    #elseif os(Windows)
+    static let directory = URL.homeDirectory.appending(
+        path: "AppData/Local/ComicViewer"
+    )
     #else
     static let directory = URL.homeDirectory.appending(
         path: "Library/Application Support/Comic Viewer"
