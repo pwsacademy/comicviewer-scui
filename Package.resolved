@@ -1,5 +1,5 @@
 {
-  "originHash" : "6c94cae989598c4dbaf156fc308066a7819c2eff7cdeeab66d6fd74718536c78",
+  "originHash" : "ff45084c96a1f3d164483a8765ddb36b5de976b3dcfc9963837abc96ded256e7",
   "pins" : [
     {
       "identity" : "jpeg",
@@ -34,7 +34,7 @@
       "location" : "https://github.com/moreSwift/swift-cross-ui",
       "state" : {
         "branch" : "main",
-        "revision" : "d30b232d588d38f72ce66359d7c8dba4e361cc3d"
+        "revision" : "dd27cc1443aa4ea701ce1f520f10d2a1d52c748a"
       }
     },
     {
@@ -70,6 +70,15 @@
       "state" : {
         "revision" : "d319bcc2586f7dbc6a09c05792105078263f1ed3",
         "version" : "0.7.2"
+      }
+    },
+    {
+      "identity" : "swift-mutex",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swhitty/swift-mutex",
+      "state" : {
+        "revision" : "1770152df756b54c28ef1787df1e957d93cc62d5",
+        "version" : "0.0.6"
       }
     },
     {

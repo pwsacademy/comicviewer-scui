@@ -2,7 +2,8 @@ import SwiftCrossUI
 
 struct FavoritesSidebar: View {
     
-    @State private var sortFavoritesAscending = false
+    @AppStorage(SortFavoritesAscending.self)
+    private var sortFavoritesAscending: Bool
 
     private var comicStore: ComicStore
     private var favoritesStore: FavoritesStore

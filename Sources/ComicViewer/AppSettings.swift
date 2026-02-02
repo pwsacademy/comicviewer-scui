@@ -1,11 +1,12 @@
 import Foundation
+import SwiftCrossUI
 
-// Keys for storing settings in UserDefaults.
-// These are currently unused.
-extension String {
+/// Key for storing the sort order of the favorites sidebar in `UserDefaults`.
+struct SortFavoritesAscending: AppStorageKey {
+    typealias Value = Bool
     
-    static let initialSelectionKey = "initialSelection"
-    static let sortFavoritesAscendingKey = "sortFavoritesAscending"
+    static var defaultValue = false
+    static var name = "sortFavoritesAscending"    
 }
 
 /// Various types and properties related to application settings.
